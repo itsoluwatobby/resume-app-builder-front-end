@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import {resumeUrl, userUrl} from "../features/api/axios";
+import {resumeUrl} from "../features/api/axios";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 
@@ -69,7 +69,7 @@ const ResumeDataProvider = ({children}) => {
     setError('')
     setLoading(true)
     try{
-      const response = await userUrl.post('/register', {
+      const response = await resumeUrl.post('/user/register', {
         username, email: userEmail, password
       })
       setSignIn(true)
@@ -93,7 +93,7 @@ const ResumeDataProvider = ({children}) => {
     setError('')
     setLoading(true)
     try{
-      const response = await userUrl.post('/login', {
+      const response = await resumeUrl.post('/user/login', {
         email: userEmail, password
       })
       const {email} = response.data
@@ -118,7 +118,7 @@ const ResumeDataProvider = ({children}) => {
   
   const handleLogout = async() => {
     try{
-      await userUrl.get('/logout')
+      await resumeUrl.get('/user/logout')
       localStorage.removeItem('isLoggedIn')
       localStorage.removeItem('email')
       setAuth({})
@@ -136,7 +136,7 @@ const ResumeDataProvider = ({children}) => {
     let isMounted = true
     const fetchResume = async() => {
       try{
-        const response = await resumeUrl.get(`/fetch?email=${getData}`)
+        const response = await resumeUrl.get(`/resume/fetch?email=${getData}`)
         setSavedData(response?.data)
       }
       catch(error){
@@ -166,7 +166,7 @@ const ResumeDataProvider = ({children}) => {
       try{
         const url = await uploadPicture()
         const resumeInput = {...resumeData, picture: url}
-        const response = await resumeUrl.post(`/create?email=${auth?.email}`, resumeInput)
+        const response = await resumeUrl.post(`/resume/create?email=${auth?.email}`, resumeInput)
         setSavedData(response?.data)
         navigate('/samples')
         setResumeData({})
