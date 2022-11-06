@@ -38,7 +38,7 @@ const ResumeDataProvider = ({children}) => {
         if(userImage?.size >= 1048576){
           return alert('Max allowed file is 1mb')
         }else{
-          userImage && setImagePreview(URL.createObjectURL(userImage))
+          isMounted && setImagePreview(URL.createObjectURL(userImage))
         }
       }else return
     }
