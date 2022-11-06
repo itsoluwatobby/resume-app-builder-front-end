@@ -119,6 +119,7 @@ const ResumeDataProvider = ({children}) => {
   const handleLogout = async() => {
     try{
       await resumeUrl.get('/user/logout')
+      setSavedData({})
       localStorage.removeItem('isLoggedIn')
       localStorage.removeItem('email')
       setAuth({})
