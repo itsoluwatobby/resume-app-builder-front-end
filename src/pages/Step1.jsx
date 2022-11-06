@@ -11,10 +11,10 @@ const Step1 = () => {
     <main 
       onClick={() => setDisplay(false)} 
       className='step h-[calc(100vh-150px)] pb-4 relative'>
-      <h1 className='text-center pt-14 pb-5 text-4xl text-white'>Your Details</h1>
-      <section>
+      <h1 className='text-center minscreen:pt-6 pt-14 pb-5 text-4xl text-white'>Your Details</h1>
+      <section className=''>
         {/* firstname and lastname */}
-        <div className='flex items-center w-full mt-2 justify-evenly'>
+        <div className='flex items-center w-full mt-2 justify-evenly minscreen:flex minscreen:flex-col'>
           <Input
             value={firstName}
             required={true}
@@ -33,7 +33,7 @@ const Step1 = () => {
           />
         </div>
         {/* email and phone number */}
-        <div className='flex items-center w-full justify-evenly'>
+        <div className='flex items-center w-full justify-evenly minscreen:flex minscreen:flex-col'>
           <Input
             value={email}
             required={true}
@@ -52,7 +52,7 @@ const Step1 = () => {
           />
         </div>
         {/* address and gitHub */}
-        <div className='flex items-center w-full justify-evenly'>
+        <div className='flex items-center w-full justify-evenly minscreen:flex minscreen:flex-col'>
           <Input
             value={address}
             required={false}
@@ -71,7 +71,7 @@ const Step1 = () => {
           />
         </div>
         {/* linkedin and twitter */}
-        <div className='flex items-center w-full justify-evenly'>
+        <div className='flex items-center w-full justify-evenly minscreen:flex minscreen:flex-col'>
           <Input
             value={linkedIn}
             required={false}
@@ -90,11 +90,12 @@ const Step1 = () => {
           />
         </div>
         {/* facebook and instagram */}
-        <div className='flex items-center w-full justify-evenly'>
+        <div className='flex items-center w-full justify-evenly minscreen:flex minscreen:flex-col '>
           <Input
             value={facebook}
             required={false}
             type='text' 
+            del={true}
             placeholder='Facebook'
             handleChange={(e) => setResumeData({...resumeData, facebook: e.target.value})}
             name={facebook}
@@ -103,13 +104,14 @@ const Step1 = () => {
             value={instagram}
             required={false}
             type='text' 
+            del={true}
             placeholder='Instagram'
             handleChange={(e) => setResumeData({...resumeData, instagram: e.target.value})}
             name={instagram}
           />
         </div>
       </section>
-      <div className="flex absolute right-5 gap-4 cursor-pointer text-2xl">
+      <div className="flex absolute right-5 gap-4 minscreen:bottom-[35px] cursor-pointer text-2xl">
         <Link to='/'><p className='text-white hover:text-gray-600'>Back</p></Link>
         {canNext1 ? 
           <Link to='/step2'>

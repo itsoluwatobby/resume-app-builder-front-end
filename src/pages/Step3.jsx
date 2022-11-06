@@ -12,7 +12,7 @@ const Step3 = () => {
     <main 
       onClick={() => setDisplay(false)}
       className='step pb-8 relative'>
-      <h1 className='text-white text-center pt-10 pb-5 text-4xl uppercase'>Extra Details</h1>
+      <h1 className='text-white text-center pt-5 pb-5 text-4xl uppercase'>Extra Details</h1>
       <section>
         {/* skill1 and skill2 */}
         <p className='text-white uppercase ml-8 midscreen:ml-4 font-medium mb-[-14px]'>Skills/Languages</p>
@@ -28,6 +28,7 @@ const Step3 = () => {
           <Input
             value={skill2}
             required={true}
+            right={true}
             type='text' 
             placeholder='skill 2*'
             handleChange={(e) => setResumeData({...resumeData, skill2: e.target.value})}
@@ -37,6 +38,7 @@ const Step3 = () => {
             value={skill3}
             required={false}
             type='text' 
+            del={true}
             placeholder='skill 3'
             handleChange={(e) => setResumeData({...resumeData, skill3: e.target.value})}
             name={skill3}
@@ -44,6 +46,7 @@ const Step3 = () => {
           <Input
             value={skill4}
             required={false}
+            del={true}
             type='text' 
             placeholder='skill 4'
             handleChange={(e) => setResumeData({...resumeData, skill4: e.target.value})}
@@ -64,6 +67,7 @@ const Step3 = () => {
           <Input
             value={interest2}
             required={true}
+            right={true}
             type='text' 
             placeholder='interest 2*'
             handleChange={(e) => setResumeData({...resumeData, interest2: e.target.value})}
@@ -72,6 +76,7 @@ const Step3 = () => {
           <Input
             value={interest3}
             required={false}
+            del={true}
             type='text' 
             placeholder='interest 3'
             handleChange={(e) => setResumeData({...resumeData, interest3: e.target.value})}
@@ -80,6 +85,7 @@ const Step3 = () => {
           <Input
             value={interest4}
             required={false}
+            del={true}
             type='text' 
             placeholder='interest 4'
             handleChange={(e) => setResumeData({...resumeData, interest4: e.target.value})}
@@ -112,6 +118,7 @@ const Step3 = () => {
           <Input
             value={workshop2}
             required={false}
+            // del={true}
             type='text' 
             placeholder='Workshop 2'
             handleChange={(e) => setResumeData({...resumeData, workshop2: e.target.value})}

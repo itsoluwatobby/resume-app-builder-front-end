@@ -15,7 +15,7 @@ const Step4 = () => {
       <section>
         {/* skill1 and skill2 */}
         <p className='text-white uppercase ml-9 midscreen:ml-5 font-medium mb-[-14px]'>Project 1</p>
-        <div className='flex flex-col items-center w-full mt-0 justify-evenly'>
+        <div className='flex flex-col minscreen:gap-3 items-center w-full mt-0 justify-evenly'>
           <Input
             required={true}
             type='text' 
@@ -45,7 +45,7 @@ const Step4 = () => {
             name={description1}
           />
         </div>
-        {/* ski and phone number */}
+        {/* skill and phone number */}
         <p className='text-white uppercase ml-9 midscreen:ml-5 font-medium mb-[-14px] mt-3'>Project 2</p>
         <div className='pb-6 flex flex-col items-center w-full mt-0 justify-evenly'> 
           <Input

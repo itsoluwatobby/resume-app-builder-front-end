@@ -14,12 +14,12 @@ const Sample2 = () => {
     <article className='flex-auto flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[720px] w-full font-serif'>
       <div className='w-full flex flex-col gap-1 p-2 midscreen:w-full h-[95%] rounded-md border shadow-2xl border-gray-400 relative'>
         <div className='flex-none max-h-32 bg-slate-100 flex items-center box-border'>
-          <div className='flex-none h-full bg-gray-700 w-24 shadow-2xl mr-2'>
+          <div className='flex-none h-full bg-gray-700 w-24 shadow-2xl mr-2 flex items-start'>
             <img src={savedData?.picture || ''} alt="userPassport" className='w-full object-cover h-full'/>
           </div>
           <div className='flex-none flex flex-col gap-1 items-center'>
-            <h2 className='capitalize text-2xl'>{savedData?.firstName || 'first Name'}</h2>
-            <h2 className='capitalize text-2xl'>{savedData?.lastName || 'last Name'}</h2>
+            <h2 className='capitalize text-[18px]'>{savedData?.firstName || 'first Name'}</h2>
+            <h2 className='capitalize text-[18px]'>{savedData?.lastName || 'last Name'}</h2>
           </div>
           <div className='flex-auto flex flex-col items-end'>
             <div className='flex items-center gap-2'>
@@ -40,7 +40,7 @@ const Sample2 = () => {
             </div>
           </div>
         </div>
-        <div className='flex-auto flex flex-col gap-1 p-2 bg-slate-200 text-[15px]'>
+        <div className='flex-auto flex flex-col gap-2 p-2 bg-slate-200 text-[15px]'>
           <div className='flex flex-col justify-center'>
             <div className='flex items-center gap-3'>
               <div className='bg-purple-800 text-white p-[6px] rounded-full'>

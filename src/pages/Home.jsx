@@ -20,12 +20,12 @@ const Home = () => {
           <img src={template1} alt="template1" className='w-[300px] cursor-pointer h-[400px] midscreen:w-[230px] midscreen:h-[280px] rounded-lg float-left mr-2 animate'
           onClick={() => emailData && navigate('/template1')}
           />
-          <p className='text-white midscreen:text-black bg-transparent text-[18px] font-serif shadow-md p-2 rounded-md'>
+          <p className='text-white midscreen:text-black bg-transparent text-[18px] minscreen:text-[20px] font-serif shadow-md p-2 rounded-md'>
             <span className='text-white'>
               Writing a resume isn't always an easy task,
-            </span> a lot always comes to mind nad figuring out what to should be included and what shouldn't is always a time-tasking decision.
+            </span><span className='minscreen:text-white minscreen:font-semibold'> a lot always </span>comes to mind nad figuring out what to should be included and what shouldn't is always a time-tasking decision.
           </p>
-          <p className='mt-52 midscreen:mt-0 midscreen:text-black text-black text-[18px] font-serif shadow-md p-2 rounded-md'>
+          <p className='minscreen:hidden mt-52 midscreen:mt-0 midscreen:text-black text-black text-[18px] font-serif shadow-md p-2 rounded-md'>
               <span className='midscreen:text-white text-black'>
                 But that is about to change cause' right here is an app that will</span> make everything easier for you.
                
@@ -35,7 +35,7 @@ const Home = () => {
           {emailData ?
             <Link to={savedData?.firstName ? '/samples' : '/step1'}>
               <button 
-                className='absolute midscreen:left-[5%] midscreen:top-[75%] top-[75%] left-[30%] bg-gray-400 midscreen:pr-5 midscreen:pl-5 rounded-md midscreen:p-3 p-8 text-[24px] cursor-pointer shadow-lg hover:opacity-80 midscreen:text-[17px] font-[600] active:opacity-100'>{savedData?.firstName ? 'View your resume' : 'Create your resume'}
+                className='absolute minscreen:top-[60%] midscreen:left-[5%] midscreen:top-[75%] top-[75%] left-[30%] bg-gray-400 midscreen:pr-5 midscreen:pl-5 rounded-md midscreen:p-3 p-8 text-[24px] cursor-pointer shadow-lg hover:opacity-80 midscreen:text-[17px] font-[600] active:opacity-100'>{savedData?.firstName ? 'View your resume' : 'Create your resume'}
               </button>
             </Link> : ''
           }

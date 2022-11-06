@@ -16,31 +16,31 @@ const Resume1 = () => {
           <p className='mr-2'>Nationality:</p>
           <p className='font-[600]'>{savedData?.nationality || 'null'}</p>
         </div>
-        <div className='flex flex-col items-center gap-1 h-full w-[35vw] midscreen:w-[48%] rounded-t-full rounded-b-md bg-purple-400 pt-5 p-2'>
-          <div className='flex-none relative rounded-full border-4 border-white h-[130px] w-[202px] bg-gray-200 shadow-lg'>
+        <div className='flex flex-col items-center gap-1 h-full w-[35vw] midscreen:w-[48%] rounded-t-full rounded-b-md bg-purple-400 pt-5 p-2 minscreen:gap-4 minscreen:font-semibold'>
+          <div className='flex-none relative rounded-full border-4 border-white h-[130px] w-[202px] bg-gray-200 shadow-lg minscreen:max-w-[160px]'>
             <img src={savedData?.picture || ''} alt="userPassport" className='rounded-full w-full object-cover h-full'/>
-            <div className='bg-purple-200 p-[2px] rounded-md absolute bottom-0 left-12 z-50 shadow-lg flex items-left text-[14px] font-medium'>
+            <div className='bg-purple-200 p-[2px] rounded-md absolute bottom-0 left-12 z-50 shadow-lg flex items-left text-[14px] font-medium minscreen:hidden'>
               <p className='mr-2'>Gender:</p>
               <p className='font-[600]'>{savedData?.gender || 'null'}</p>
             </div>
           </div>
           <div className='flex-auto flex flex-col items-left'>
-            <div className='flex items-left text-[14px] font-medium'>
+            <div className='minscreen:hidden flex items-left text-[14px] font-medium'>
               <p className='mr-2'>Status:</p>
               <p className='font-[600]'>{savedData?.status || 'null'}</p>
             </div>
-            <div className='flex items-left text-[14px] font-medium'>
+            <div className='minscreen:hidden flex items-left text-[14px] font-medium'>
               <p className='mr-2 capitalize'>Date 0f Birth:</p>
               <p className='font-[600]'>{savedData?.dateOfBirth || 'null'}</p>
             </div>
             <p className='border-b-2 border-gray-300 text-2xl text-center font-medium'>{savedData?.fullName || 'John Doe'}
             </p>
-            <p className='mt-1 break-normal h-70 border-b-2 border-gray-300'>
-              {savedData?.careerObjective || 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.    Quibusdam repudiandae labore nemo praesentium? Consequuntur doloremque dicta, ullam qui dolorum quia dolore. Fugiat dolore adipisci id.'}
+            <p className='box-border mt-1 break-normal h-70 border-b-2 border-gray-300 minscreen:box-border minscreen:pt-2 minscreen:pb-1'>
+              {savedData?.careerObjective || 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.    Quibusdam repudiandae labore nemo praesentium? Consequuntur doloremque dicta, ullam qui dolorum quia dolore.'}
            </p>
             
-            <div className='mt-2 overflow-hidden flex flex-col items-start w-full box-border'>
-              <div className='flex items-center gap-2'>  
+            <div className='mt-2 overflow-hidden flex flex-col items-start w-full box-border minscreen:gap-2'>
+              <div className='flex items-center gap-2 minscreen:flex-col'>  
                 <p className='bg-gray-500 p-[1px] text-[15px] rounded-md uppercase'>Education</p>
                 <div className='flex items-center'>
                   <p className='uppercase mr-1'>cgpa:</p>
@@ -101,15 +101,15 @@ const Resume1 = () => {
             </p>}
             {savedData?.description2 && <p className='break-all'>{savedData?.description2 || 'null'}</p>}
           </div>
-          <div className='flex flex-col border-b-2 border-gray-300 items-start w-full'>
+          <div className='flex flex-col border-b-2 minscreen:h-50 h-30 border-gray-300 items-start w-full'>
             <p className='uppercase text-[15px] bg-gray-500 rounded-md p-[1px] text-center'>Contact</p>
             <div className='w-full flex flex-col items-start h-28 overflow-hidden
               '>
-              <div className='flex items-center pt-1'>
+              <div className='flex items-center pt-1 minscreen:flex-col'>
                 <FaAddressCard className='text-gray-900 mr-2 text-[18px]'/>
                 <span className='break-all'>{savedData?.address || 'null'}</span>
               </div>
-              <div className='flex items-center pt-1'>
+              <div className='flex items-center pt-1 minscreen:flex-col'>
                 <MdEmail className='text-gray-900 mr-2 text-[20px]'/>
                 <span className='break-all'>{savedData?.email || 'johnDoe@gmail.com'}</span>
               </div>
@@ -119,7 +119,7 @@ const Resume1 = () => {
               </p> 
             </div>
           </div>
-          <div className='flex flex-col border-b-2 border-gray-300 items-start w-full'>
+          <div className='flex flex-col mt-2 border-b-2 border-gray-300 items-start w-full'>
             <p className='uppercase text-[15px] bg-gray-500 rounded-md p-[1px] text-center'>Language Proficiency</p>
             <p className='flex items-center gap-2'>
               <span className='break-all'>Level:</span>

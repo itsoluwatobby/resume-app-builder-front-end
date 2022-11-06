@@ -17,7 +17,7 @@ const Template2 = () => {
     <main>
       <nav className='font-serif flex justify-between items-center p-2 pl-6 pr-6 text-2xl bg-gray-500 sticky top-0 z-50'>
         <Link to='/'>
-          <div className='cursor-pointer uppercase'>
+          <div className='cursor-pointer uppercase minscreen:text-[20px]'>
             Resume Builder
           </div>
         </Link>

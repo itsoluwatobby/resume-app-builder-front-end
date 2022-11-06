@@ -20,8 +20,8 @@ const Resume2 = () => {
             <img src={savedData?.picture || ''} alt="userPassport" className='w-full object-cover h-full'/>
           </div>
           <div className='flex-none flex flex-col gap-1 items-center'>
-            <h2 className='capitalize text-2xl'>{savedData?.firstName || 'first Name'}</h2>
-            <h2 className='capitalize text-2xl'>{savedData?.lastName || 'last Name'}</h2>
+            <h2 className='capitalize text-[18px]'>{savedData?.firstName || 'first Name'}</h2>
+            <h2 className='capitalize text-[18px]'>{savedData?.lastName || 'last Name'}</h2>
           </div>
           <div className='flex-auto flex flex-col items-end'>
             <div className='flex items-center gap-2'>

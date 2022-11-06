@@ -11,10 +11,10 @@ const Step2 = () => {
     <main 
       onClick={() => setDisplay(false)}
       className='pb-4 relative step h-[calc(100vh-160px)]'>
-      <h1 className='text-center pt-4 pb-4 text-4xl text-white'>EDUCATION DETAILS</h1>
+      <h1 className='text-center pt-4 minscreen:pt-4 pb-4 text-4xl text-white'>EDUCATION DETAILS</h1>
       <section>
         {/* college, qualification, cgpa, description and date */}
-        <div className='flex flex-wrap items-center mt-2 justify-evenly border-b-2 border-gray-200'>
+        <div className='flex flex-wrap items-center mt-1 justify-evenly border-b-2 border-gray-200'>
           <Input
             value={college}
             type='text' 
@@ -71,6 +71,7 @@ const Step2 = () => {
             value={schoolDate2}
             type='date'
             required={false} 
+            right={true}
             handleChange={(e) => setResumeData({...resumeData, schoolDate2: e.target.value})}
             name={schoolDate2}
           />
@@ -78,6 +79,8 @@ const Step2 = () => {
             value={percentage}
             type='text'
             required={false} 
+            del={true}
+            right={true}
             placeholder='Percentage'
             handleChange={(e) => setResumeData({...resumeData, percentage: e.target.value})}
             name={percentage}
@@ -87,6 +90,7 @@ const Step2 = () => {
             type='text' 
             maxLength={30}
             placeholder='Qualification'
+            del={true}
             handleChange={(e) => setResumeData({...resumeData, schoolQualification: e.target.value})}
             required={false}
             name={schoolQualification}
@@ -95,6 +99,7 @@ const Step2 = () => {
             value={degree2}
             type='text'
             width={true}
+            del={false}
             placeholder='Degree'
             required={false} 
             handleChange={(e) => setResumeData({...resumeData, degree2: e.target.value})}
@@ -102,7 +107,7 @@ const Step2 = () => {
           />
         </div>
       </section>
-      <div className="flex absolute bottom-5 right-5 gap-4 cursor-pointer text-2xl">
+      <div className="flex absolute bottom-8 right-5 minscreen:right-7 gap-4 cursor-pointer text-2xl">
         <Link to='/step1'><p className='text-white hover:text-gray-600'>Back</p></Link>
         {canNext2 ? 
           <Link to='/step3'>

@@ -12,7 +12,7 @@ const Step5 = () => {
       <h1 className='text-white text-center pt-10 pb-5 text-4xl uppercase'>Personal Details</h1>
       {uploading ? <p className='w-full text-center text-[20px] text-green-600'>Uploading image...</p> : ''}
       <section>
-        <div className='relative pb-4 flex flex-col items-center w-full mt-0 justify-evenly'>
+        <div className='relative pb-4 flex flex-col items-center minscreen:gap-3 w-full mt-0 justify-evenly'>
           <Input
             required={true}
             value={fullName}
@@ -30,7 +30,7 @@ const Step5 = () => {
             handleChange={(e) => setResumeData({...resumeData, userImage: e.target.files[0]})}
             name={userImage}
           />
-          <label htmlFor="dateOfBirth" className='absolute text-white midscreen:left-5 midscreen:top-[122px] top-[116px] left-10 font-[600]'>Date Of Birth:</label>
+          <label htmlFor="dateOfBirth" className='absolute text-white midscreen:left-5 midscreen:top-[122px] minscreen:top-[150px] top-[116px] left-10 font-[600]'>Date Of Birth:</label>
           <Input
             required={true}
             value={dateOfBirth}
