@@ -12,9 +12,9 @@ const Sample2 = () => {
 
   return (
     <article className='flex-auto flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[720px] w-full font-serif'>
-      <div className='w-full flex flex-col gap-1 p-2 midscreen:w-full h-[95%] rounded-md border shadow-2xl border-gray-400 relative'>
-        <div className='flex-none max-h-32 bg-slate-100 flex items-center box-border'>
-          <div className='flex-none h-full bg-gray-700 w-24 shadow-2xl mr-2 flex items-start'>
+      <div className='max-w-[85%] flex flex-col gap-1 p-2 midscreen:w-full h-[95%] rounded-md border shadow-2xl border-gray-400 relative'>
+        <div className='flex-none h-[115px] bg-slate-100 flex items-center box-border'>
+          <div className='flex-none h-full bg-gray-700 w-[100px] shadow-2xl mr-2 flex items-start'>
             <img src={savedData?.picture || ''} alt="userPassport" className='w-full object-cover h-full'/>
           </div>
           <div className='flex-none flex flex-col gap-1 items-center'>
