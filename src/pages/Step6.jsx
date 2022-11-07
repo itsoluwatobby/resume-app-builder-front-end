@@ -8,7 +8,7 @@ const Step6 = () => {
   } = useResumeContext();
 
   return (
-    <main onClick={() => setDisplay(false)} className='mt-14 min-h-[85vh] p-4'>
+    <main onClick={() => setDisplay(false)} className='mt-14 min-h-[85vh] p-4 minscreen:mt-24'>
       <div className='list pr-2 pl-2 pt-4 pb-4 border-2 border-gray-300 h-[80vh] shadow-lg overflow-y-scroll rounded-md relative'>
         <div className='absolute top-0 right-0 h-[130px] w-[110px] shadow-lg bg-transparent rounded-md border-4 border-white'>
           <img src={imagePreview ? imagePreview : ''} alt="passport" className='h-[100%] w-[100%]'/>

@@ -85,6 +85,7 @@ const ResumeDataProvider = ({children}) => {
       error.response?.status === 500 && setError('internal server error')
     }finally{
       setLoading(false)
+      setSuccess(false)
     }
   }
 
@@ -189,7 +190,7 @@ const ResumeDataProvider = ({children}) => {
   }
 
   const value = {
-    firstName, lastName, email, phoneNumber, address, gitHub, linkedIn, twitter, facebook, instagram, college, schoolDate1, cgpa, qualification, degree1, schoolName, schoolDate2, percentage, schoolQualification, degree2, submitData, skill1, skill2, skill3, skill4, interest1, interest2, interest3, interest4, careerObjective, workshop1, workshop2, title1, link1, description1, title2, link2, description2, fullName, gender, status, nationality, dateOfBirth, languageProficiency, setResumeData, resumeData, imagePreview, canNext1, canNext2, canNext3, canNext4, canNext5, signIn, signUp, setSignIn, setSignUp, user, setUser, username, userEmail, password, handleRegister, handleLogin, handleLogout, error, loading, auth, success, uploading, savedData, confirm, setConfirm, display, setDisplay, setError, emailData
+    firstName, lastName, email, phoneNumber, address, gitHub, linkedIn, twitter, facebook, instagram, college, schoolDate1, cgpa, qualification, degree1, schoolName, schoolDate2, percentage, schoolQualification, degree2, submitData, skill1, skill2, skill3, skill4, interest1, interest2, interest3, interest4, careerObjective, workshop1, workshop2, title1, link1, description1, title2, link2, description2, fullName, gender, status, nationality, dateOfBirth, languageProficiency, setResumeData, resumeData, imagePreview, canNext1, canNext2, canNext3, canNext4, canNext5, signIn, signUp, setSignIn, setSignUp, user, setUser, username, userEmail, password, handleRegister, handleLogin, handleLogout, error, loading, auth, success, uploading, savedData, confirm, setConfirm, display, setDisplay, setError, emailData, setLoading
   }
 
   return (

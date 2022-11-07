@@ -108,7 +108,7 @@ const Navbar = () => {
           </nav>
         ) : (
           pathname !== '/' &&
-          <div className='flex flex-col justify-center items-center p-1 bg-gray-200 text-[18px] font-serif'>
+          <div className={`flex flex-col justify-center items-center p-1 bg-gray-200 text-[18px] font-serif minscreen:mb-10`}>
             <p className='capitalize text-gray-700 tracking-widest  bg-gray-300 w-full text-center shadow-lg'>Preview your details before final submission</p>
             <div className='w-full midscreen:pr-2 midscreen:pl-2 pr-4 pl-4 flex items-center justify-between'>
               <Link to='/step5'>
