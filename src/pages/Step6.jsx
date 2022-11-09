@@ -202,7 +202,7 @@ const Step6 = () => {
               onClick={() => {
                 setError('')
               }}
-              className='z-50 fixed top-1/3 gap-3 midscreen:gap-0 midscreen:left-1/3 right-[20%] border-[3px] border-gray-300 bg-gray-200 rounded-lg shadow-2xl midscreen:w-[280px] w-[350px] p-4 midscreen:p-2 flex flex-col items-center'>
+              className='minscreen:right-[30%] z-50 fixed top-1/3 gap-3 midscreen:gap-0 midscreen:left-1/3 right-[20%] border-[3px] border-gray-300 bg-gray-200 rounded-lg shadow-2xl midscreen:w-[280px] w-[350px] p-4 midscreen:p-2 flex flex-col items-center'>
               <FaTimesCircle 
                 onClick={() => {
                   setConfirm(false)
