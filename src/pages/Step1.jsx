@@ -10,7 +10,7 @@ const Step1 = () => {
   return (
     <main 
       onClick={() => setDisplay(false)} 
-      className='step h-[calc(100vh-150px)] pb-4 relative'>
+      className='step pb-4 relative'>
       <h1 className='text-center minscreen:pt-6 pt-14 pb-5 text-4xl text-white'>Your Details</h1>
       <section className=''>
         {/* firstname and lastname */}

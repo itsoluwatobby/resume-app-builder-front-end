@@ -10,7 +10,7 @@ const Step2 = () => {
   return (
     <main 
       onClick={() => setDisplay(false)}
-      className='pb-4 relative step h-[calc(100vh-160px)]'>
+      className='pb-4 relative step'>
       <h1 className='text-center pt-4 minscreen:pt-4 pb-4 text-4xl text-white'>EDUCATION DETAILS</h1>
       <section>
         {/* college, qualification, cgpa, description and date */}
