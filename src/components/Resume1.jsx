@@ -8,7 +8,7 @@ const Resume1 = () => {
   const {savedData, loading, error} = useResumeContext();
 
   return (
-    <article className='flex minscreen:mt-4 items-center p-1 h-[100vh] midscreen:h-[110vh] max-w-[720px] font-serif relative'>
+    <article className='flex minscreen:mt-2 items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[720px] w-1/2 font-serif relative'>
       {loading ? <p className='absolute top-[40%] z-40 w-full text-center text-[32px] text-green-600'>Fetching Resume...</p> : ''}
       {!loading && error ? <p className='absolute top-[40%] capitalize w-full text-center text-[32px] text-red-600'>{error}</p> : 
       <div className='flex gap-1 p-1 midscreen:w-full w-[95%] rounded-md border shadow-2xl border-gray-400 relative'>
@@ -16,7 +16,7 @@ const Resume1 = () => {
           <p className='mr-2'>Nationality:</p>
           <p className='font-[600]'>{savedData?.nationality || 'null'}</p>
         </div>
-        <div className='flex flex-col items-center gap-1 h-full w-[35vw] midscreen:w-[48%] rounded-t-full rounded-b-md bg-purple-400 pt-5 p-2 minscreen:gap-4 minscreen:font-semibold'>
+        <div className='flex flex-col items-center gap-1 w-[35vw] midscreen:w-[48%] rounded-t-full rounded-b-md bg-purple-400 pt-5 p-2 minscreen:gap-4 minscreen:font-semibold'>
           <div className='flex-none relative rounded-full border-4 border-white h-[130px] w-[202px] bg-gray-200 shadow-lg minscreen:max-w-[160px]'>
             <img src={savedData?.picture || ''} alt="userPassport" className='rounded-full w-full object-cover h-full'/>
             <div className='bg-purple-200 p-[2px] rounded-md absolute bottom-0 left-12 z-50 shadow-lg flex items-left text-[14px] font-medium minscreen:hidden'>

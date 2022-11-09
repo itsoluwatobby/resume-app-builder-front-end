@@ -8,13 +8,13 @@ const Sample1 = () => {
   const {savedData} = useResumeContext();
 
   return (
-    <article className='flex-none flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[720px] font-serif max-w-[95%]'>
-      <div className='minscreen:font-semibold flex justify-center gap-1 p-1 minscreen:max-w-full midscreen:w-full max-w-[95%] rounded-md border shadow-2xl border-gray-400 relative'>
+    <article className='flex-auto flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[720px] font-serif w-full'>
+      <div className='minscreen:font-semibold flex justify-center gap-1 p-1 minscreen:max-w-full midscreen:w-full max-w-[85%] rounded-md border shadow-2xl border-gray-400 relative'>
         <div className='rounded-tr-md rounded-br-md p-[1px] flex items-left text-[16px] font-medium absolute z-40 top-0 left-0 bg-gray-100'>
           <p className='mr-2'>Nationality:</p>
           <p className='font-[600]'>{savedData?.nationality || 'null'}</p>
         </div>
-        <div className='flex flex-col items-center gap-1 h-full w-[35vw] midscreen:w-[48%] rounded-t-full rounded-b-md bg-purple-400 pt-5 p-2 whitespace-normal minscreen:gap-4 minscreen:font-semibold'>
+        <div className='flex flex-col items-center gap-1 w-[35vw] midscreen:w-[48%] rounded-t-full rounded-b-md bg-purple-400 pt-5 p-2 whitespace-normal minscreen:gap-4 minscreen:font-semibold'>
           <div className='flex-none relative rounded-full border-4 border-white h-[130px] w-[202px] minscreen:max-w-[160px] bg-gray-200 shadow-lg'>
             <img src={savedData?.picture || ''} alt="userPassport" className='rounded-full w-full object-cover h-full'/>
             <div className='bg-purple-200 p-[2px] rounded-md absolute bottom-0 left-12 z-50 shadow-lg flex items-left text-[14px] font-medium minscreen:hidden'>
