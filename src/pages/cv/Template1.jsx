@@ -38,7 +38,7 @@ const Template1 = () => {
             className='hidden midscreen:block cursor-pointer hover:text-gray-700 active:text-gray-900 text-3xl'>&#9776;</p>
         </div>
       </nav>
-      <div>
+      <div className='flex midscreen:flex-col justify-center midscreen:pl-0 pl-6'>
         <Resume1 />
       </div>
     </main>
