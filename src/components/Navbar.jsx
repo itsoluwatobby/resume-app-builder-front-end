@@ -8,7 +8,7 @@ import useWindowSize from '../hooks/useWindowSize';
 const Navbar = () => {
   const {pathname} = useLocation();
   const width = useWindowSize()
-  const {emailData, setSignIn, handleLogout, display, setDisplay, setSignUp, confirm, setLoading, setConfirm, setError} = useResumeContext();
+  const {emailData, setSignIn, handleLogout, display, setDisplay, setSignUp, confirm, setConfirm, setError} = useResumeContext();
 
   useEffect(() => {
     width <= 750 && setDisplay(false)
@@ -117,7 +117,7 @@ const Navbar = () => {
               <button 
                 onClick={() => {
                   setConfirm(prev => !prev)
-                  setLoading(false)
+                  setError('')
                 }}
                 className='bg-teal-200 rounded-md p-[2px] text-[17px] cursor-pointer shadow-lg hover:opacity-80 active:opacity-100'>{confirm ? 'Cancel submission' : 'Submit Form'}</button>
             </div>
