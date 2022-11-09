@@ -18,7 +18,7 @@ const Home = () => {
         
         <div className='p-1 flex mt-4 relative'>
           <img src={template1} alt="template1" className='w-[300px] cursor-pointer h-[400px] midscreen:w-[230px] midscreen:h-[280px] rounded-lg float-left mr-2 animate'
-          onClick={() => emailData && navigate('/template1')}
+          onClick={() => emailData && savedData ? navigate('/template1') : navigate('/step1')}
           />
           <p className='text-white midscreen:text-black bg-transparent text-[18px] minscreen:text-[20px] font-serif shadow-md p-2 rounded-md'>
             <span className='text-white'>
