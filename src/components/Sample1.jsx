@@ -9,7 +9,7 @@ const Sample1 = () => {
 
   return (
     <article className='flex-auto flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[700px] font-serif w-full'>
-      <div className='minscreen:font-semibold flex justify-center gap-1 p-1 minscreen:max-w-full midscreen:w-full w-full rounded-md border shadow-2xl border-gray-400 relative'>
+      <div className='minscreen:font-semibold flex justify-center gap-1 p-1 minscreen:max-w-full midscreen:w-full w-[85%] rounded-md border shadow-2xl border-gray-400 relative'>
         <div className='rounded-tr-md rounded-br-md p-[1px] flex items-left text-[16px] font-medium absolute z-40 top-0 left-0 bg-gray-100'>
           <p className='mr-2'>Nationality:</p>
           <p className='font-[600]'>{savedData?.nationality || 'null'}</p>
