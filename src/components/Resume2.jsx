@@ -11,7 +11,7 @@ const Resume2 = () => {
   const {savedData, loading, error} = useResumeContext();
 
   return (
-    <article className='flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[720px] w-1/2 font-serif relative'>
+    <article className='flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[620px] w-[600px] font-serif relative'>
       {loading ? <p className='absolute top-[40%] z-40 w-full text-center text-[32px] text-green-600'>Fetching Resume...</p> : ''}
       {!loading && error ? <p className='absolute top-[40%] capitalize w-full text-center text-[32px] text-red-600'>{error}</p> : (
       <div className='box-border flex flex-col gap-1 p-2 midscreen:w-full w-[95%] rounded-md border shadow-2xl border-gray-400 relative'>

@@ -39,8 +39,8 @@ const Samples = () => {
             className='hidden midscreen:block cursor-pointer hover:text-gray-700 active:text-gray-900 text-3xl'>&#9776;</p>
         </div>
       </nav>
-      <div className='relative w-full flex midscreen:flex-col midscreen:pl-0 pl-4 pr-4 midscreen:pr-0'>
-      <div className='jump absolute bg-transparent p-4 rounded-lg font-semibold text-center text-[18px] top-14 z-50 left-1/2'>Tap sample to view single template</div>
+      <div className='relative w-full flex gap-2 flex-wrap midscreen:w-[700px] midscreen:flex-col midscreen:pl-0 p-4 midscreen:pr-0'>
+        <div className='jump absolute bg-transparent p-4 rounded-lg font-semibold text-center text-[18px] top-14 z-50 left-1/2'>Tap sample to view single template</div>
         <Link to='/template1'><Sample1 /></Link>
         <Link to='/template2'><Sample2 /></Link>
       </div>

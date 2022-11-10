@@ -8,10 +8,10 @@ const Resume1 = () => {
   const {savedData, loading, error} = useResumeContext();
 
   return (
-    <article className='flex minscreen:mt-1 items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[700px] w-1/2 font-serif relative'>
+    <article className='flex minscreen:mt-1 items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[620px] w-[600px] font-serif relative'>
       {loading ? <p className='absolute top-[40%] z-40 w-full text-center text-[32px] text-green-600'>Fetching Resume...</p> : ''}
       {!loading && error ? <p className='absolute top-[40%] capitalize w-full text-center text-[32px] text-red-600'>{error}</p> : 
-      <div className='flex gap-1 p-1 midscreen:w-full w-[85%] rounded-md border shadow-2xl border-gray-400 relative'>
+      <div className='flex gap-1 p-1 minscreen:max-w-[80%] midscreen:w-[80%] rounded-md border shadow-2xl border-gray-400 relative'>
         <div className='rounded-tr-md rounded-br-md p-[1px] flex items-left text-[16px] font-medium absolute z-40 top-0 left-0 bg-gray-100'>
           <p className='mr-2'>Nationality:</p>
           <p className='font-[600]'>{savedData?.nationality || 'null'}</p>
@@ -91,12 +91,12 @@ const Resume1 = () => {
           <div className='flex flex-col items-start w-full gap-1'>
             <p className='bg-gray-400 p-[1px] rounded-md text-[15px] uppercase'>Projects</p>
             <p className='pt-[2px] text-gray-700 border-b-2 border-gray-400 uppercase text-[15px]'>{savedData?.title1 || 'null'}</p>
-            <p className='text-[14px] font-thin italic text-gray-800 box-border whitespace-normal'>
+            <p className='break-normal text-[14px] font-thin italic text-gray-800 box-border whitespace-normal'>
               {savedData?.link1 || 'null'}
             </p>
             <p className='break-all'>{savedData?.description1 || 'null'}</p>
             {savedData?.title2 && <p className='pt-[2px] text-gray-700 border-b-2 border-gray-400 uppercase text-[15px]'>{savedData?.title2 || 'null'}</p>}
-            {savedData?.link2 && <p className='text-[14px] font-thin italic text-gray-800 box-border whitespace-normal'>
+            {savedData?.link2 && <p className='break-normal text-[14px] font-thin italic text-gray-800 box-border whitespace-normal'>
               {savedData?.link2 || 'null'}
             </p>}
             {savedData?.description2 && <p className='break-all'>{savedData?.description2 || 'null'}</p>}

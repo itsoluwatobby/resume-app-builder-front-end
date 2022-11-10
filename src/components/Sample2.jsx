@@ -11,8 +11,8 @@ const Sample2 = () => {
   const {savedData, loading, error} = useResumeContext();
 
   return (
-    <article className='flex-auto flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[720px] w-full font-serif'>
-      <div className='max-w-[85%] flex flex-col gap-1 p-2 midscreen:w-full rounded-md border shadow-2xl border-gray-400 relative'>
+    <article className='flex-auto flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[620px] w-[600px] font-serif'>
+      <div className='flex flex-col gap-1 p-2 minscreen:max-w-[80%] w-[95%] midscreen:w-[82%] rounded-md border shadow-2xl border-gray-400 relative'>
         <div className='flex-none h-[115px] bg-slate-100 flex items-center box-border'>
           <div className='flex-none h-full bg-gray-700 w-[100px] shadow-2xl mr-2 flex items-start'>
             <img src={savedData?.picture || ''} alt="userPassport" className='w-full object-cover h-full'/>

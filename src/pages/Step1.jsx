@@ -10,8 +10,8 @@ const Step1 = () => {
   return (
     <main 
       onClick={() => setDisplay(false)} 
-      className='step pb-4 relative'>
-      <h1 className='text-center minscreen:pt-6 pt-14 pb-5 text-4xl text-white'>Your Details</h1>
+      className='step midscreen:pb-10 minscreen:pb-4 pb-10 relative'>
+      <h1 className='text-center minscreen:pt-6 pt-14 pb-4 text-4xl text-white'>Your Details</h1>
       <section className=''>
         {/* firstname and lastname */}
         <div className='flex items-center w-full mt-2 justify-evenly minscreen:flex minscreen:flex-col'>

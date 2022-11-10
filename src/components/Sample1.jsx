@@ -8,8 +8,8 @@ const Sample1 = () => {
   const {savedData} = useResumeContext();
 
   return (
-    <article className='flex-auto flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[700px] font-serif w-full'>
-      <div className='minscreen:font-semibold flex justify-center gap-1 p-1 minscreen:max-w-full midscreen:w-full w-[85%] rounded-md border shadow-2xl border-gray-400 relative'>
+    <article className='flex-auto flex p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[620px] font-serif w-[620px]'>
+      <div className='box-border minscreen:font-semibold flex justify-center gap-1 p-1 minscreen:max-w-[80%] midscreen:w-[80%] w-full rounded-md border shadow-2xl border-gray-400 relative'>
         <div className='rounded-tr-md rounded-br-md p-[1px] flex items-left text-[16px] font-medium absolute z-40 top-0 left-0 bg-gray-100'>
           <p className='mr-2'>Nationality:</p>
           <p className='font-[600]'>{savedData?.nationality || 'null'}</p>
@@ -89,12 +89,12 @@ const Sample1 = () => {
           <div className='flex flex-col items-start w-full gap-1 flex-none'>
             <p className='bg-gray-400 p-[1px] rounded-md text-[15px] uppercase'>Projects</p>
             <p className='pt-[2px] text-gray-700 border-b-2 border-gray-400 uppercase text-[15px]'>{savedData?.title1 || 'null'}</p>
-            <p className='text-[14px] font-thin italic text-gray-800 box-border whitespace-normal'>
+            <p className='break-normal text-[14px] font-thin italic text-gray-800 box-border whitespace-normal'>
               {savedData?.link1 || 'null'}
             </p>
             <p className='break-all'>{savedData?.description1 || 'null'}</p>
             {savedData?.title2 && <p className='pt-[2px] text-gray-700 border-b-2 border-gray-400 uppercase text-[15px] box-border whitespace-normal'>{savedData?.title2 || 'null'}</p>}
-            {savedData?.link2 && <p className='text-[14px] font-thin italic text-gray-800'>
+            {savedData?.link2 && <p className='text-[14px] font-thin italic text-gray-800 break-normal'>
               {savedData?.link2 || 'null'}
             </p>}
             {savedData?.description2 && <p className='break-all'>{savedData?.description2 || 'null'}</p>}
