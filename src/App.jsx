@@ -28,11 +28,11 @@ function App() {
             <Route path="/step6" element={<Step6 />} />
           </Route>
         </Route>
-        {/* <Route element={<PrivateRoute />}> */}
+        <Route element={<PrivateRoute />}>
           <Route path="/samples" element={<Samples />} />
           <Route path="/template1" element={<Template1 />} />
           <Route path="/template2" element={<Template2 />} />
-        {/* </Route> */}
+        </Route>
       </Routes>
     </div>
   )
