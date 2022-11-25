@@ -7,7 +7,8 @@ module.exports = {
     extend: {},
     screens: {
       midscreen: {'max': '768px'},
-      minscreen: {'max': '480px'},
+      minscreen: {'max': '480px'},     
+      bigscreen: {'max': '800px'},     
     }
   },
   plugins: [],
