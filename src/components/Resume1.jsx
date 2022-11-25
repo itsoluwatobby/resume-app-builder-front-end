@@ -19,11 +19,11 @@ const Resume1 = () => {
     <article className='flex minscreen:mt-1 items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[620px] w-[600px] font-serif relative'>
       <button 
         onClick={handlePrint1}
-        className='absolute bg-green-400 pr-6 pl-6 rounded-md p-2 text-[17px] cursor-pointer shadow-lg hover:opacity-80 active:opacity-100 top-2 left-11 bigscreen:mb-8'>Download Resume
+        className='absolute bg-green-400 pr-6 pl-6 rounded-md p-2 text-[17px] cursor-pointer shadow-lg hover:opacity-80 active:opacity-100 top-2 left-11'>Download Resume
       </button>
       {loading ? <p className='absolute top-[40%] z-40 w-full text-center text-[32px] text-green-600'>Fetching Resume...</p> : ''}
       {!loading && error ? <p className='absolute top-[40%] capitalize w-full text-center text-[32px] text-red-600'>{error}</p> : 
-      <div ref={resumeRef1} className='flex gap-1 p-1 minscreen:max-w-[80%] midscreen:w-[80%] rounded-md border shadow-2xl border-gray-400 relative'>
+      <div ref={resumeRef1} className='mt-12 flex gap-1 p-1 minscreen:max-w-[80%] midscreen:w-[80%] rounded-md border shadow-2xl border-gray-400 relative'>
         <div className='rounded-tr-md rounded-br-md p-[1px] flex items-left text-[16px] font-medium absolute z-40 top-0 left-0 bg-gray-100'>
           <p className='mr-2'>Nationality:</p>
           <p className='font-[600]'>{savedData?.nationality || 'null'}</p>
