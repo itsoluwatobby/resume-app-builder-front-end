@@ -9,7 +9,7 @@ const Resume1 = () => {
   const {savedData, loading, error} = useResumeContext();
   const resumeRef1 = useRef()
 
-  const handlePrint = useReactToPrint({
+  const handlePrint1 = useReactToPrint({
     content: () => resumeRef1.current,
     documentTitle: savedData?.email,
     onAfterPrint: () => alert('Document downloaded successsfully')
@@ -18,7 +18,7 @@ const Resume1 = () => {
   return (
     <article className='flex minscreen:mt-1 items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[620px] w-[600px] font-serif relative'>
       <button 
-        onClick={handlePrint}
+        onClick={handlePrint1}
         className='absolute bg-green-400 pr-6 pl-6 rounded-md p-2 text-[17px] cursor-pointer shadow-lg hover:opacity-80 active:opacity-100 top-2 left-11'>Download Resume
       </button>
       {loading ? <p className='absolute top-[40%] z-40 w-full text-center text-[32px] text-green-600'>Fetching Resume...</p> : ''}
