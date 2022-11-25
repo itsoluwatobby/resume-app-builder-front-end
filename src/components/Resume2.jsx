@@ -1,20 +1,33 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import { FaHome, FaPhoneAlt, FaLanguage } from 'react-icons/fa';
 import { MdEmail, MdSchool, MdWorkspacesOutline } from 'react-icons/md';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { BiNetworkChart } from 'react-icons/bi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { SiActivision } from 'react-icons/si';
+import { useReactToPrint } from 'react-to-print'
 import useResumeContext from '../context/useResumeContext';
 
 const Resume2 = () => {
   const {savedData, loading, error} = useResumeContext();
+  const resumeRef2 = useRef()
+
+  const handlePrint = useReactToPrint({
+    content: () => resumeRef2.current,
+    documentTitle: savedData?.email,
+    onAfterPrint: () => alert('Document downloaded successsfully')
+  })
+
 
   return (
     <article className='flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[620px] w-[600px] font-serif relative'>
+      <button 
+        onClick={handlePrint}
+        className='absolute bg-green-400 pr-6 pl-6 rounded-md p-2 text-[17px] cursor-pointer shadow-lg hover:opacity-80 active:opacity-100 top-2 left-11'>Download Resume
+      </button>
       {loading ? <p className='absolute top-[40%] z-40 w-full text-center text-[32px] text-green-600'>Fetching Resume...</p> : ''}
       {!loading && error ? <p className='absolute top-[40%] capitalize w-full text-center text-[32px] text-red-600'>{error}</p> : (
-      <div className='box-border flex flex-col gap-1 p-2 midscreen:w-full w-[95%] rounded-md border shadow-2xl border-gray-400 relative'>
+      <div ref={resumeRef2} className='box-border flex flex-col gap-1 p-2 midscreen:w-full w-[95%] rounded-md border shadow-2xl border-gray-400 relative'>
         <div className='flex-none max-h-32 bg-slate-100 flex items-center'>
           <div className='flex-none h-full bg-gray-700 w-24 shadow-2xl mr-2'>
             <img src={savedData?.picture || ''} alt="userPassport" className='w-full object-cover h-full'/>
