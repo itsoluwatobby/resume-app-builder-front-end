@@ -10,9 +10,9 @@ const Step1 = () => {
   return (
     <main 
       onClick={() => setDisplay(false)} 
-      className='step midscreen:pb-10 minscreen:pb-4 pb-10 relative'>
+      className='step midscreen:pb-10 minscreen:pb-4 pb-10 relative h-full'>
       <h1 className='text-center minscreen:pt-6 pt-14 pb-4 text-4xl text-white'>Your Details</h1>
-      <section className=''>
+      <section className='h-full p-4'>
         {/* firstname and lastname */}
         <div className='flex items-center w-full mt-2 justify-evenly minscreen:flex minscreen:flex-col'>
           <Input
@@ -112,7 +112,7 @@ const Step1 = () => {
         </div>
       </section>
       <div className="flex absolute right-5 gap-4 minscreen:bottom-[35px] cursor-pointer text-2xl">
-        <Link to='/'><p className='text-white hover:text-gray-600'>Back</p></Link>
+        {/* <Link to='/'><p className='text-white hover:text-gray-600'>Back</p></Link> */}
         {canNext1 ? 
           <Link to='/step2'>
             <p className='text-white hover:text-gray-600'>Next</p>

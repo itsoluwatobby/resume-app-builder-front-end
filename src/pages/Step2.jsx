@@ -107,7 +107,7 @@ const Step2 = () => {
           />
         </div>
       </section>
-      <div className="flex absolute bottom-8 right-5 minscreen:right-7 minscreen:mt-1 gap-4 cursor-pointer text-2xl">
+      <div className="flex absolute bottom-6 right-5 minscreen:right-7 minscreen:mt-1 gap-4 cursor-pointer text-2xl">
         <Link to='/step1'><p className='text-white hover:text-gray-600'>Back</p></Link>
         {canNext2 ? 
           <Link to='/step3'>

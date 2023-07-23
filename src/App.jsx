@@ -11,11 +11,12 @@ import Home from "./pages/Home";
 import Template1 from "./pages/cv/Template1";
 import Template2 from "./pages/cv/Template2";
 import Samples from "./pages/cv/Samples";
+import useResumeContext from "./context/useResumeContext";
 
 function App() {
-
+  const { theme } = useResumeContext()
   return (
-    <div className="App min-h-100vh w-100vw">
+    <main className={`min-h-screen w-full ${theme === 'light' ? 'bg-slate-50 text-black' : 'dark:bg-black text-white'} transition-all`}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -34,7 +35,7 @@ function App() {
           <Route path="/template2" element={<Template2 />} />
         </Route>
       </Routes>
-    </div>
+    </main>
   )
 }
 

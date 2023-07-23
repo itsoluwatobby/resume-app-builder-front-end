@@ -4,19 +4,19 @@ import useResumeContext from '../../context/useResumeContext';
 
 const Login = () => {
   const [reveal, setReveal] = useState(false);
-  const { userEmail, password, user, setUser, loading, error, setError, handleLogin,success, setSignIn, setSignUp} = useResumeContext();
+  const { userEmail, password, user, setUser, loading, error, setError, handleLogin, success, setSignIn, setSignUp} = useResumeContext();
 
   return (
-    <main className='z-50 absolute top-28 left-[35%] midscreen:left-[15%] max-h-64 midscreen:w-[75%] w-[35%]'>
+    <main className='z-50 absolute top-28 left-[35%] midscreen:left-[15%] max-h-64 midscreen:w-[55%] w-[30%]'>
       <div 
         onClick={() => setError('')}
-        className='p-2 flex items-center flex-col gap-2 h-full w-full border bg-gray-300 rounded-md shadow-lg'>
-        <h1 className='flex-none uppercase font-[600] border-b-2 border-gray-400 text-[20px]'>Sign In Here</h1>
+        className='text-sm p-2 flex items-center flex-col gap-2 h-full w-full bg-slate-900 text-white rounded-md shadow-2xl'>
+        <h1 className='flex-none uppercase font-[600] border-gray-400 text-lg'>Sign In</h1>
         <form onSubmit={handleLogin} className='font-medium flex-auto flex flex-col w-full p-1'>
         {success ? <p className='capitalize w-full text-center text-[20px] text-green-600'>Registration successful</p> : ''}
         {error ? <p className='w-full capitalize text-center text-[20px] text-red-600'>{error}</p> : ''}
           <div className='flex flex-col w-full pb-2'>  
-            <label htmlFor="email">email:</label>
+            <label htmlFor="email">Email:</label>
             <input 
               type="email" 
               id='email'
@@ -25,11 +25,11 @@ const Login = () => {
               placeholder='email'
               autoComplete='off'
               onChange={(e) => setUser({...user, userEmail: e.target.value})}
-              className='shadow-lg border-none w-full focus:outline-none rounded-md pl-2 p-2'
+              className='text-black shadow-lg border-none w-full focus:outline-none rounded-sm pl-2 p-2'
             />
           </div>
           <div className='flex flex-col w-full pb-2 relative'>  
-            <label htmlFor="password">password:</label>
+            <label htmlFor="password">Password:</label>
             <input 
               type={reveal ? 'text' : 'password'} 
               id='password'
@@ -38,7 +38,7 @@ const Login = () => {
               placeholder='password'
               autoComplete='off'
               onChange={(e) => setUser({...user, password: e.target.value})}
-              className='shadow-lg border-none w-full focus:outline-none rounded-md pl-2 p-2'
+              className='text-black shadow-lg border-none w-full focus:outline-none rounded-sm pl-2 p-2'
             />
             {reveal ?
               <AiFillEyeInvisible 
@@ -54,7 +54,7 @@ const Login = () => {
           </div>
           <button 
             type='submit'
-            className='w-fill p-2 capitalize bg-green-500 rounded-md mt-2 cursor-pointer hover:bg-green-400 active:bg-green-500 transition duration-150 ease-in-out text-[18px]'  
+            className='w-fill p-1 pl-2 pr-2 capitalize bg-green-500 rounded-sm mt-2 cursor-pointer hover:bg-green-400 active:bg-green-500 transition duration-150 ease-in-out text-base'  
           >{loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>

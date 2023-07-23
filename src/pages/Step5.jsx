@@ -26,7 +26,7 @@ const Step5 = () => {
             required={true}
             type='file' 
             width={true}
-            accepts='image/png'
+            accepts='image/*.{jpg,png,jpeg}'
             handleChange={(e) => setResumeData({...resumeData, userImage: e.target.files[0]})}
             name={userImage}
           />
@@ -42,7 +42,7 @@ const Step5 = () => {
           <select 
             name="gender"
             onChange={(e) => setResumeData({...resumeData, gender: e.target.value})}
-            className='w-[94vw] border border-3 border-gray-400 rounded-md h-8 midscreen:w-[90vw] mt-3 mb-3 focus:outline-none'
+            className='w-[94vw] border border-3 border-gray-400 rounded-md h-8 midscreen:w-[90vw] mt-3 mb-3 focus:outline-none text-black'
             required={true}
             value={gender}
           >
@@ -53,7 +53,7 @@ const Step5 = () => {
           <select 
             name="status"
             onChange={(e) => setResumeData({...resumeData, status: e.target.value})}
-            className='w-[94vw] border border-3 border-gray-400 rounded-md h-8 midscreen:w-[90vw] mt-3 mb-3 focus:outline-none'
+            className='text-black w-[94vw] border border-3 border-gray-400 rounded-md h-8 midscreen:w-[90vw] mt-3 mb-3 focus:outline-none'
             required={false}
             value={status}
           >
@@ -74,7 +74,7 @@ const Step5 = () => {
           <select 
             name="languageProficiency"
             onChange={(e) => setResumeData({...resumeData, languageProficiency: e.target.value})}
-            className='w-[94vw] border border-3 border-gray-400 rounded-md h-8 midscreen:w-[90vw] mt-3 mb-3 focus:outline-none'
+            className='text-black w-[94vw] border border-3 border-gray-400 rounded-md h-8 midscreen:w-[90vw] mt-3 mb-3 focus:outline-none'
             required={true}
             value={languageProficiency}
           >
