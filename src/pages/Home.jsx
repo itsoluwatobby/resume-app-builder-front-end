@@ -14,12 +14,14 @@ const Home = () => {
   return (
     <main className='w-full h-full text-white'>
       
-      <section className='flex items-center w-full md:w-1/2 p-8 cursor-default'>
-        <HomeCards />
+      <section className='relative flex-grow flex items-center w-full p-8 cursor-default justify-between h-full'>
+        <HomeCards upper />
+        <HomeCards reverse top />
       </section>
 
-      <section className='cursor-default flex items-end justify-end w-full md:w-1/2 p-8'>
-        <HomeCards />
+      <section className='relative flex-grow flex items-center w-full p-8 cursor-default justify-between h-full '>
+        <HomeCards bottom />
+        <HomeCards reverse />
       </section>
       
        {signUp && <Register />}

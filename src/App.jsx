@@ -14,7 +14,8 @@ import Samples from "./pages/cv/Samples";
 import useResumeContext from "./context/useResumeContext";
 
 function App() {
-  const { theme } = useResumeContext()
+  const { theme } = useResumeContext();
+  
   return (
     <main className={`min-h-screen w-full ${theme === 'light' ? 'bg-slate-50 text-black' : 'dark:bg-black text-white'} transition-all`}>
       <Routes>

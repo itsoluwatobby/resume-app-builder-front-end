@@ -17,7 +17,7 @@ const Navbar = () => {
   const links = ['/step1', '/step2', '/step3', '/step4', '/step5', '/step6']
 
   return (
-    <section className={`sticky top-0 z-50 border border-b-1 border-r-0 border-l-0 border-t-0 border-x-8 flex flex-col ${pathname !== '/step6' && pathname !== '/' ? 'h-[180px] midscreen:h-[160px]' : 'h-[50px]'}`}>
+    <section className={`sticky top-0 ${theme == 'light' ? 'bg-slate-50' : 'bg-black'} z-50 border border-b-1 border-r-0 border-l-0 border-t-0 border-x-8 flex flex-col ${pathname !== '/step6' && pathname !== '/' ? 'h-[180px] midscreen:h-[160px]' : 'h-[50px]'}`}>
       <div 
         className='relative midscreen:p-2 pt-2 pb-2 pr-8 pl-8 justify-between flex-none text-center flex items-center'>
         <Link to={emailData ? '/step1' : '/'}>
