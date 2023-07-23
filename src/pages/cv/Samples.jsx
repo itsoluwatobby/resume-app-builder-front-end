@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Sample1 from '../../components/Sample1'
 import Sample2 from '../../components/Sample2'
 import useResumeContext from '../../context/useResumeContext'
-import useWindowSize from '../../hooks/useWindowSize'
 import { ResumeNav } from '../../components/ResumeNav'
 
 const Samples = () => {
@@ -14,8 +13,8 @@ const Samples = () => {
       
       <ResumeNav />
 
-      <div className='relative w-full flex gap-2 flex-wrap midscreen:w-[700px] midscreen:flex-col midscreen:pl-0 p-4 midscreen:pr-0'>
-        <div className='jump absolute bg-transparent p-4 rounded-lg font-semibold text-center text-[18px] top-14 z-50 left-1/2'>Tap sample to view single template</div>
+      <div className='flex maxscreen:flex-col minscreen:overflow-x-scroll gap-10 items-center md-pl-6 md:pr-6 md:flex-row md:justify-evenly w-full'>
+        {/* <h3 className='animate-bounce absolute bg-slate-500 bg-opacity-60 p-1 rounded-lg left-20 font-serif text-[18px] top-14 z-50 m-auto'>Tap sample to view single template</h3> */}
         <Link to='/template1'>
           <Sample1 />
         </Link>

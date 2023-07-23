@@ -28,19 +28,19 @@ const Navbar = () => {
               setSignUp(false)
               setSignIn(false)
             }}
-            className='text-lg first-letter:text-4xl font-serif flex-auto '>RESUME BUILDER
+            className='text-lg first-letter:text-4xl font-serif flex-auto minscreen:text-sm minscreen:first-letter:text-xl'>RESUME BUILDER
           </h1>
         </Link>
-        <div>
+        <div className='text-xl minscreen:text-base'>
           {
             theme == 'light' ?
               <BsMoonStars 
-                className='text-xl cursor-pointer hover:opacity-70 transition-all'
+                className='cursor-pointer hover:opacity-70 transition-all'
                 onClick={() => setTheme('dark')}
               />
             :
               <BsSun 
-                className='text-xl cursor-pointer hover:opacity-70 transition-all'
+                className='cursor-pointer hover:opacity-70 transition-all'
                 onClick={() => setTheme('light')}
               />
           }
@@ -52,7 +52,7 @@ const Navbar = () => {
             </p>
                : 
          !emailData ? (
-            <div className={`flex items-center justify-between font-serif gap-4`}>
+            <div className={`flex items-center justify-between font-serif gap-4 minscreen:text-sm`}>
               <p
                 onClick={() => {
                   setSignIn(prev => !prev)
