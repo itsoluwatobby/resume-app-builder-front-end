@@ -6,7 +6,7 @@ import { BiNetworkChart } from 'react-icons/bi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { SiActivision } from 'react-icons/si';
 
-export const Comp2 = ({ savedData, theme, resumeRef2 }) => {
+export const ResumeComp2 = ({ savedData, theme, resumeRef2 }) => {
 
   return (
     <div 

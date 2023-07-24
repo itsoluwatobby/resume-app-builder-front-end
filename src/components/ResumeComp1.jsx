@@ -3,7 +3,7 @@ import { FaAddressCard, FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { IoIosSchool } from 'react-icons/io';
 
-export const Comp1 = ({ savedData, theme, resumeRef1 }) => {
+export const ResumeComp1 = ({ savedData, theme, resumeRef1 }) => {
 
   return (
     <div 

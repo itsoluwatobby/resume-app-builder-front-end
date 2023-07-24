@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import { useReactToPrint } from 'react-to-print'
 import useResumeContext from '../context/useResumeContext';
-import { Comp1 } from './comp1';
+import { ResumeComp1 } from './ResumeComp1';
 
 const Resume1 = () => {
   const {savedData, loading, error, theme} = useResumeContext();
@@ -24,7 +24,7 @@ const Resume1 = () => {
         (!loading && error) 
           ? <p className='absolute top-[40%] capitalize w-full text-center text-[32px] text-red-600'>{error}</p> 
             : 
-              <Comp1 
+              <ResumeComp1
                 savedData={savedData} 
                 theme={theme} 
                 resumeRef1={resumeRef1}

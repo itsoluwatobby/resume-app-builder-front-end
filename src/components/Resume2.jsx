@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import { useReactToPrint } from 'react-to-print'
 import useResumeContext from '../context/useResumeContext';
-import { Comp2 } from './Comp2';
+import { ResumeComp2 } from './ResumeComp2';
 
 const Resume2 = () => {
   const {savedData, loading, error, theme} = useResumeContext();
@@ -13,7 +13,6 @@ const Resume2 = () => {
     onAfterPrint: () => alert('Document downloaded successsfully')
   })
 
-
   return (
     <article className='flex items-center p-1 h-[100vh] midscreen:h-[110vh] midscreen:max-w-[620px] w-[600px] font-serif relative'>
       <button 
@@ -24,7 +23,7 @@ const Resume2 = () => {
       {
         !loading && error 
           ? <p className='absolute top-[40%] capitalize w-full text-center text-[32px] text-red-600'>{error}</p> 
-            : <Comp2 
+            : <ResumeComp2
                 savedData={savedData} 
                 theme={theme} 
                 resumeRef2={resumeRef2} 
