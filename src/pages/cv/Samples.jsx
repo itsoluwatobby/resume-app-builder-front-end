@@ -9,7 +9,7 @@ const Samples = () => {
   const {handleLogout, theme} = useResumeContext();
 
   return (
-    <main className={`sticky top-0 ${theme == 'light' ? 'bg-slate-50' : 'bg-black'} z-50 border border-b-1 border-r-0 border-l-0 border-t-0 border-x-8 flex flex-col`}>
+    <main className={`sticky top-0 ${theme == 'light' ? 'bg-slate-50' : 'bg-black'} z-50 border border-b-1 border-r-0 border-l-0 border-t-0 border-x-8`}>
       
       <ResumeNav />
 

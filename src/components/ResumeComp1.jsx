@@ -8,16 +8,16 @@ export const ResumeComp1 = ({ savedData, theme, resumeRef1 }) => {
   return (
     <div 
       ref={resumeRef1}
-      className='box-border flex h-full w-full border md:w-[80%] rounded-md shadow-lg self-center gap-2 p-2 relative max-h-[600]'>
+      className='box-border flex minscreen:h-[65%] w-full border md:w-[75%] rounded-md shadow-lg self-center gap-2 p-2 relative max-h-[600]'>
 
         <div className={`rounded-tr-md rounded-br-md p-1 flex items-left font-medium absolute z-40 top-0 left-0 ${theme === 'light' ? 'bg-gray-100' : 'text-black bg-gray-200'}`}>
           <p className='mr-2'>Nationality:</p>
           <p className='font-medium'>{savedData?.nationality}</p>
         </div>
 
-        <section className={`flex-none w-[40%] h-full text-black flex flex-col items-center rounded-t-2xl gap-3 bg-purple-300 pt-5 p-2 whitespace-pre-wrap`}>
+        <section className={`flex-none w-[40%] h-full text-black flex flex-col items-center rounded-t-2xl minscreen:gap-1 gap-3 bg-purple-300 minscreen:pt-2 pt-5 p-2 whitespace-pre-wrap`}>
 
-          <figure className='flex-none relative rounded-3xl border-2 border-white h-[120px] w-full minscreen:max-w-[160px] bg-gray-200 shadow-lg'>
+          <figure className='flex-none relative rounded-3xl border-2 border-white h-[120px] midscreen:h-[100px] w-full minscreen:max-w-[160px] bg-gray-200 shadow-lg'>
 
             <img src={savedData?.picture} alt="userPassport" className='rounded-3xl w-full object-cover h-full'/>
             <figcaption className='bg-gray-200 p-[2px] rounded-md absolute bottom-0 left-12 shadow-lg flex items-left text-[14px] font-medium minscreen:hidden'>
@@ -39,12 +39,12 @@ export const ResumeComp1 = ({ savedData, theme, resumeRef1 }) => {
               <p className='font-medium'>{savedData?.dateOfBirth || 'null'}</p>
             </div>
 
-            <p className='border-b-2 border-gray-300 text-[18px] uppercase text-center font-medium mt-3'>{savedData?.fullName || 'John Doe'}</p>
+            <p className='border-b-2 border-gray-300 text-[18px] uppercase text-center font-medium minscreen:mt-1 mt-3'>{savedData?.fullName || 'John Doe'}</p>
             <p className='tracking-wide border-b-2 p-1 border-gray-300 whitespace-pre-wrap minscreen:pt-2 minscreen:pb-1'>
               {savedData?.careerObjective || 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam repudiandae labore nemo praesentium? Consequuntur doloremque dicta, ullam qui dolorum quia dolore.'}
             </p>
             
-            <div className='flex flex-col items-start w-full box-border minscreen:gap-2 p-2 gap-2'>
+            <div className='flex flex-col items-start minscreen:p-1 w-full box-border minscreen:gap-1 p-2 gap-2'>
 
               <p className='font-medium text-[15px] rounded-md uppercase'>Education</p>
               <div className='flex items-center'>

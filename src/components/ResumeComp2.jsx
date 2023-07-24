@@ -11,7 +11,7 @@ export const ResumeComp2 = ({ savedData, theme, resumeRef2 }) => {
   return (
     <div 
     ref={resumeRef2}
-      className='box-border flex h-full flex-col w-full border rounded-md shadow-lg self-center gap-2 p-2 relative max-h-[600]'>
+      className='box-border flex h-full minscreen:h-[65%] flex-col w-full border rounded-md shadow-lg self-center gap-2 p-2 relative max-h-[600]'>
 
         <section className='flex-none h-[115px] bg-slate-100 flex items-center box-border w-full text-black'>
 
