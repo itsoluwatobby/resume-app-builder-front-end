@@ -28,7 +28,7 @@ const Navbar = () => {
               setSignUp(false)
               setSignIn(false)
             }}
-            className='text-lg first-letter:text-4xl font-serif flex-auto minscreen:text-sm minscreen:first-letter:text-xl'>RESUME BUILDER
+            className='text-lg first-letter:text-4xl font-serif flex-auto minscreen:text-sm hover:opacity-60 active:opacity-100 transition-all minscreen:first-letter:text-xl'>RESUME BUILDER
           </h1>
         </Link>
         <div className='text-xl minscreen:text-base'>
@@ -46,27 +46,27 @@ const Navbar = () => {
           }
         </div>
         {links.includes(pathname) ? 
-            <p
+            <button
               onClick={handleLogout} 
-              className={`font-serif hover:opacity-90 cursor-pointer transition-all active:opacity-100`}>Logout
-            </p>
+              className={`font-serif hover:opacity-60 cursor-pointer transition-all active:opacity-100`}>Logout
+            </button>
                : 
          !emailData ? (
             <div className={`flex items-center justify-between font-serif gap-4 minscreen:text-sm`}>
-              <p
+              <button
                 onClick={() => {
                   setSignIn(prev => !prev)
                   setSignUp(false)
                   setError('')
                 }} 
-                className='font-serif hover:opacity-90 cursor-pointer transition-all active:opacity-100'>Login</p>
-              <p
+                className='font-serif hover:opacity-60 cursor-pointer transition-all active:opacity-100'>Login</button>
+              <button
                 onClick={() => {
                   setSignUp(prev => !prev)
                   setSignIn(false)
                   setError('')
                 }} 
-                className='font-serif hover:opacity-90 cursor-pointer transition-all active:opacity-100'>Register</p>
+                className='font-serif hover:opacity-60 cursor-pointer transition-all active:opacity-100'>Register</button>
             </div>
           ) : (
                 <div 

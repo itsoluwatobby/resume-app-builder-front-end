@@ -10,7 +10,7 @@ export const ResumeNav = () => {
         <Link to='/'>
           <h1 
             title='Home Page'
-            className='text-lg first-letter:text-4xl font-serif flex-auto minscreen:text-sm minscreen:first-letter:text-xl'
+            className='text-lg first-letter:text-4xl font-serif flex-auto minscreen:text-sm minscreen:first-letter:text-xl hover:opacity-60 active:opacity-100 transition-all'
             >RESUME BUILDER
           </h1>
         </Link>
@@ -32,14 +32,14 @@ export const ResumeNav = () => {
 
         <div className='flex items-center justify-between font-serif gap-4 relative minscreen:text-sm'>
             <Link to='/'>
-              <p className={`font-serif hover:opacity-90 cursor-pointer transition-all active:opacity-100`}>Home</p>
+              <p className={`font-serif hover:opacity-60 cursor-pointer transition-all active:opacity-100`}>Home</p>
             </Link>
             <Link to='/step1'>
-              <p className={`font-serif hover:opacity-90 cursor-pointer transition-all active:opacity-100`}>Form</p>
+              <p className={`font-serif hover:opacity-60 cursor-pointer transition-all active:opacity-100`}>Form</p>
             </Link>
             <p 
             onClick={handleLogout}
-            className={`font-serif hover:opacity-90 cursor-pointer transition-all active:opacity-100`}>Logout</p>
+            className={`font-serif hover:opacity-60 cursor-pointer transition-all active:opacity-100`}>Logout</p>
         </div>
       </nav>
   )
