@@ -14,7 +14,7 @@ const Samples = () => {
       <ResumeNav />
 
       <div className='flex maxscreen:flex-col minscreen:overflow-x-scroll gap-10 items-center md-pl-6 md:pr-6 md:flex-row md:justify-evenly w-full'>
-        {/* <h3 className='animate-bounce absolute bg-slate-500 bg-opacity-60 p-1 rounded-lg left-20 font-serif text-[18px] top-14 z-50 m-auto'>Tap sample to view single template</h3> */}
+        <h3 className='animate-bounce absolute bg-slate-500 bg-opacity-60 p-1 rounded-lg left-20 font-serif text-[18px] top-14 z-50 m-auto'>Tap sample to view single template</h3>
         <Link to='/template1'>
           <Sample1 />
         </Link>
